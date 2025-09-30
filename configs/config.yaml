@@ -1,0 +1,33 @@
+# RAG Pipeline Configuration
+directories:
+  data_directory: "./.venv/RAG-GPT/data" 
+  persist_directory: ".venv/RAG-GPT/data/vectordb" 
+  embedding_model_engine: "text-embedding-ada-002"
+  url: "https://docs.google.com/document/d/19ZK9Oh8wCgMYu5kjK_UMfYeOzw_nQg0quHaEbPvQVzg/edit?usp=sharing"
+
+embedding_engine:
+  embedding_model_engine: "text-embedding-ada-002"
+
+splitter_config:
+  chunk_size: 1024
+  chunk_overlap: 400
+
+retrieval_config:
+  k: 8
+
+llm_config:
+  llm_system_role: |
+    You are a chatbot. You'll receive a prompt that includes retrieved content from the vectorDB based on the user's question, and the source.
+    The source file is in Russian and the user's query might be in Russian or English. Make sure your response is in the same language as the user's query.
+    Your task is to respond to the user's new question using the information from the vectorDB without relying on your own knowledge.
+    you will receive a prompt with the the following format:
+
+    # Retrieved content number:\n
+    Content\n\n
+    Source\n\n
+
+    # User question:\n
+    New question
+  engine: "gpt-4o"
+  temperature: 1.0
+  max_token: 4096
