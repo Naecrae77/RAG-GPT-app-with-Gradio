@@ -1,6 +1,6 @@
 # RAG-GPT App with Gradio
 
-![App Interface Screenshot](image/RAG-GPT interface screenshot.png)
+![App Interface Screenshot](image/app_screenshot.png)
 
 A lightweight Retrieval-Augmented Generation (RAG) chatbot app built with Gradio, OpenAI, LangChain, and Chroma DB. Easily run, interact, and extend your own AI-powered assistant with vector search and custom knowledge.
 
