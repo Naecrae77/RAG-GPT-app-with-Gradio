@@ -9,7 +9,7 @@ A lightweight Retrieval-Augmented Generation (RAG) chatbot app built with Gradio
 - OpenAI integration for responses
 - LangChain for vector search and document handling
 - Chroma DB for fast, local vector storage and retrieval
-- Simple configuration with YAML and .env
+- Simple configuration with YAML
 
 ## Quick Start
 1. Install dependencies:
